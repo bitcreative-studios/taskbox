@@ -1,18 +1,26 @@
-import React from 'react';
+import React from 'react'
 
-import { Header } from './Header';
+import { Header } from './Header'
+import PropTypes from 'prop-types'
 
 export default {
   title: 'Example/Header',
   component: Header,
-};
+}
 
-const Template = (args) => <Header {...args} />;
+const Template = args => <Header {...args} />
 
-export const LoggedIn = Template.bind({});
+export const LoggedIn = Template.bind({})
 LoggedIn.args = {
   user: {},
-};
+  onLogin: () => {},
+  onLogout: () => {},
+  onCreateAccount: () => {},
+}
 
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {};
+export const LoggedOut = Template.bind({})
+LoggedOut.args = {
+  onLogin: () => {},
+  onLogout: () => {},
+  onCreateAccount: () => {},
+}
