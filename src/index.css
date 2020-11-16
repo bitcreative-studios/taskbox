@@ -917,6 +917,9 @@ a:focus {
   cursor: progress;
   display: inline-block;
 }
+.loading-item .glow-text span + span {
+  margin-left: 2px;
+}
 .loading-item .glow-checkbox {
   margin-right: 16px;
   width: 12px;
